@@ -1,0 +1,104 @@
+.out{
+    /* border: 2px solid; */
+    height: 100vh;
+    text-align: center;
+}
+.search {
+    display: flex;
+
+}
+.search>input{
+    text-align: center;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: #EEEFE0;
+    color: rgb(163, 155, 155);
+    border-color:rgb(212, 207, 207)
+    margin-bottom: 40px;
+    width: 120px;
+    margin-left: 450px ;
+    border: none;
+}
+.search-button{
+    /* display: inline; */
+    background: #e2ff0a;
+    background: linear-gradient(90deg, rgba(226, 255, 10, 1) 0%,
+     rgba(247, 171, 7, 1) 58%);
+     border-top-right-radius: 40px;
+     border-bottom-right-radius: 40px;
+     height:23px;
+     width: 65px;
+}
+.main{
+    background-color: rgb(255, 252, 248);
+    display: flex;
+    gap: 30px;
+    height: 100vh;
+    padding: 10px;
+    margin-top: 20px;
+}
+.left{
+    /* border: 2px solid  red; */
+    flex: 200px;
+    margin-left: 20px;
+}
+
+.right{
+    /* border: 2px solid rgb(26, 255, 0); */
+    flex:840px;
+    display: flex;
+    width: 
+    100px;
+    gap: 20px;
+    
+}
+.box{
+    /* border: 2px solid  rgb(255, 0, 195); */
+    height: 100vh;
+    width: 100vw;  
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: rgb(243, 243, 243);  
+    box-shadow: 3px 1px 30px -5px rgba(0,0,0,0.40);
+}
+.blog{
+    color: rgb(245, 149, 60);
+}
+.left{
+    margin-top: 5px;
+    padding-top: 10px;
+    text-align: start;
+}
+.images >img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 220px;
+    height: 140px;
+    /* border-radius: 5px; */
+
+}
+.content>p{
+    background-color:rgb(250, 211, 175); 
+    color: rgba(239, 177, 95, 0.97);
+    border-radius: 10px;
+    width: 150px;
+    margin-left: 20px;
+}
+.content>button{
+    background: #e2ff0a;
+    background: linear-gradient(90deg, rgba(226, 255, 10, 1) 0%,
+     rgba(247, 171, 7, 1) 58%);
+     border-radius: 40px;
+     width: 100px;
+     border: none;
+     height: 30px;
+
+}
+.content>h5{
+    color:rgb(202, 192, 192);
+    background-color: rgb(248, 234, 234);
+    border-radius: 30px;
+    margin-top: 20px;
+    font-size: 10px;
+    width: fit-content;
+}
