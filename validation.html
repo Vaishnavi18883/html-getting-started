@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .form{
+            height: 60vh;
+            width: 35vw;
+            /* border: 2px solid red; */
+            border-radius: 10px;
+            background-color: rgb(243, 243, 243);
+            background-color: rgb(17, 17, 118);
+            margin-top:50px;
+            font-size: 1.5em;
+            color: #ffffff;
+            margin-left: 20rem; 
+            padding: 20px;
+        }
+        #submit-btn{
+            background-color: rgb(170, 7, 7);
+            color: #ffffff;
+            padding: 8px;
+            outline: none;
+        }
+        #reset-btn{
+            background-color: rgb(170, 7, 7);
+            color: #ffffff;
+            padding: 8px;
+            outline: none;
+            
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <form class="form">
+    Name
+    <input type="text" id="name" >
+    <div id="nameError" class="error"></div><br>
+    Email
+    <input type="email" id="email">
+    <div id="mailError" class="error"></div><br>
+    Password 
+    <input type="password"  id="password">
+    <div id="passError" class="error"></div><br>
+    <button id="submit-btn">SUBMIT</button>
+    <button id="reset-btn">RESET</button>
+    <div class="output"></div>
+</form>
+
+
+    <script>
+    const form = document.querySelector(".form")
+    const name = document.getElementById("name")
+
+    const email = document.getElementById("email")
+    const password = document.getElementById("password")
+    const output = document.querySelector(".output")
+     
+
+    form.addEventListener("submit",function(e){
+        e.preventDefault();
+
+        let isValid = true;
+        clearAllError();
+        output.innerHTML = "";
+
+
+        if(!/^[A-Z][a-z]*(?:[ '-][A-Z][a-z]*)*$/ 
+        .test(name.value)){
+            showError("nameError","Invalid name");
+            isValid = false;
+          }
+       if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/ .test(email.value)){
+        showError("mailError","Please enter valid email");
+        isValid = false;
+
+       }
+       if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/ .test
+        (password.value)){
+            showError("passError","Invalid Password");
+            isValid = false;
+        }
+        if(isValid){
+            output.innerHTML =
+            `<p> Login Succesfully</p>`
+            form.reset();
+                }
+
+
+    });
+    name.addEventListener("input",()=> clearError("nameError"));
+    email.addEventListener("input",()=>clearError("mailError"));
+    password.addEventListener("input",()=>clearError("passError"));
+    function showError(id,message){
+      document.getElementById(id).innerText =message;
+    }
+    function clearError(id){
+      document.getElementById(id).innerText = "";
+    }
+    function clearAllError(){
+        clearError("nameError");
+        clearError("mailError");
+        clearError("passError");
+    }
+    </script>
+</body>
+</html>
