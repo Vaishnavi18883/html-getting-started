@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        *{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .parent{
+            background-color: rgb(188, 187, 186);
+        }
+    </style>
+</head>
+<body>
+    <p>select largest heading in html </p>
+<div class="parent"><input type="radio" id="a" name="lang" value="h1">
+<label for="h1">h1</label><br>
+</div>
+<div><input type="radio" id="b" name="lang" value="h6">
+<label for="h6">h6</label><br></div>
+<div class="parent"><input type="radio" id="c" name="lang" value="h2">
+<label for="h2" >h2</label><br></div>
+<input type="radio" id="d" name="lang" value="h3">
+<label for="h3" >h3</label>
+
+<p class="show"></p>
+
+
+    <script>
+        const a = document.getElementById('a')
+        const b = document.getElementById('b')
+        const c = document.getElementById('c')
+        const d = document.getElementById('d')
+        const show = document.getElementsByClassName("show")[0]
+       
+
+        a.addEventListener('click',function ans(){
+            show.innerText = "correct answer"
+        })
+        b.addEventListener('click',function notAns(){
+            show.innerText = "incorrect answer"
+        })
+        c.addEventListener('click',function notAns(){
+            show.innerText = "incorrect answer"
+        })
+        d.addEventListener('click',function notAns(){
+            show.innerText = "incorrect answer"
+        })
+        
+        </script>
+</body>
+</html>
