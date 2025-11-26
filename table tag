@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabletag</title>
+</head>
+<body>
+    <table style border "black">
+        <caption>Food Menu</caption>
+        <tr><thead>
+            <th>Items</th>
+            <th>Price</th>
+
+        </tr>
+            </thead>
+        <tr><tbody>
+            <td>Samosa</td>
+           <td>Chips</td>
+        </tr>
+        <tr>
+            <td>20</td>
+           <td>10</td>
+        </tr></tbody>
+    </table>
+</body>
+</html>
