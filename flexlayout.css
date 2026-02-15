@@ -1,0 +1,17 @@
+.container{
+    height: 50px;
+    width:80vw;
+    background-color: palevioletred;
+    border: 2px solid rgb(55, 234, 204);
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+}
+.container>div{
+    font-size: 24px;
+    height: 20px;
+    width: 70px;
+    margin-left: 20px;
+    line-height: 50px;
+}
